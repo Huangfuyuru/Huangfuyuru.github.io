@@ -1,0 +1,91 @@
+/*
+    笔记：
+    box-sizing
+    box-sizing:content-box 默认值，如果你设置一个元素的宽为100px，
+    那么这个元素的内容区会有100px宽，并且任何边框和内边距的宽度都会
+    被增加到最后绘制出来的元素宽度中
+    box-sizing:border-box 告诉浏览器去理解你设置的边框和内边距的值
+    是包含在width内的，也就是说，如果你将一个元素的width设为100px,
+    那么这100px会包含其他的border和padding，内容区的实际宽度会是
+    width-border-padding的计算值
+*/
+html{
+    font-family: sans-serif;
+}
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+}
+.info-box{
+    width:450px;
+    height: 400px;
+    position: fixed;
+    top:0;
+}
+.fake-content{
+    background-color:hsla(184, 71%, 59%, 0.932) ;
+    color:white;
+    padding:10px;
+    height: 2000px;
+    margin-left: 470px; 
+}
+.info-box ul{
+    padding-left: 0;
+    margin-top: 0;
+}
+.info-box li{
+    list-style-type: none;
+    width:150px;
+    float: left;
+}
+.info-box li a{
+    display: inline-block;
+    text-decoration: none;
+    width:100%;
+    line-height: 3;
+    color:black;
+    text-align: center;
+}
+/*
+    笔记
+    这个效果很棒
+    省去了JS
+*/
+.info-box li a:focus, .info-box li a:hover{
+    background-color:hsla(184, 71%, 59%, 0.932);
+    color:white;
+}
+/*
+    下面这个有点摸不清
+*/
+.info-box li a.active{
+    background-color: hsla(184, 71%, 59%, 0.932);
+    color:white;
+}
+/*
+    笔记
+    添加clear:both 清除浮动，避免影响布局的剩余部分
+*/
+.info-box .panels{
+    height: 352px;
+    position: relative;
+    clear:both;
+}
+/*
+    给class为article的部分设置绝对定位，
+    绝对定位是鉴于.panels的，他们都会脱离文档流
+*/
+.info-box article{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 352px;
+    padding:10px;
+    color:white;
+    background-color: hsla(184, 71%, 59%, 0.932);
+}
+.info-box .active-panel{
+    z-index:1;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo.css">
+    <script src="demo.js"></script>
+</head>
+<body>
+    <!--
+        笔记
+        <label>标签为input元素定义标注
+        label元素不会向用户呈现任何特殊效果，不过，他为鼠标用户改进了可用性
+        如果您在label元素内点击文本，就会触发此控件，就是说，当用户选在该标签时，
+        浏览器就会自动将焦点转到和标签相关的表单控件上
+        label的for属性和应当与input的id相同
+        
+
+        我们这里用的作用是：
+        你能通过点击label标签来选择checkbox，就好像点击了这个checkbox自己一样
+
+
+    -->
+    <label for="toggle">❔</label>
+    <input type="checkbox" id="toggle">
+    <aside>
+        <h2>Information</h2>
+
+        <p>Some very important about your app:</p>
+
+        <ol>
+
+            <li>It has a really cool slide-out information box.</li>
+            <li>This information box uses a combination of fixed positioning and a CSS transition for the smooth sliding.</li>
+            <li>It also uses a cool technique called the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>.</li>
+            <li>This allows you to create a nice "toggle on/toggle off" UI effect without using any JavaScript, which will work in IE9 and above (the smooth transition will work in IE10 and above.)</li>
+          
+        </ol>
+    </aside>
+</body>
+</html>
