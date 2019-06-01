@@ -7,10 +7,12 @@
 window.onload=function(){
 
 var tabs=document.querySelectorAll('.info-box li a');
+console.log(tabs);
 var panels = document.querySelectorAll('.info-box article');
 for(i=0;i<tabs.length;i++){
     //是把a取了出来
     var tab=tabs[i];
+    console.log(tabs[i]);
     setTabHandler(tab,i);
 }
 function setTabHandler(tab,tabPos){
